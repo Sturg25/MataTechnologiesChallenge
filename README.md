@@ -1,4 +1,4 @@
-# MataTechnologiesChallenge | E-Commerce Cart System
+# MataTechnologiesChallenge | E-commerce Landing Page with Shopping Cart
 
 This project is a simple e-commerce shopping cart system using HTML, CSS, JavaScript (with jQuery), Bootstrap, and SweetAlert. The system allows users to add items to a shopping cart, update quantities, and checkout with an interactive and modern UI.
 

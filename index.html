@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
+  
+    <!-- Bootstrap CSS (v5.3.2) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!--  SweetAlert CSS and JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script type="text/javascript" src="./js/shopping_cart.js"></script>
+  
+    <title>THREADED - Home</title>
+  </head>
+  <body><!-- Navigation -->
+    <nav class="navbar navbar-expand-lg main-nav">
+        <div class="container-fluid">
+            <!-- Left Nav -->
+            <div class="d-flex">
+                <a class="nav-link left-nav mx-3 active-tab" href="#">WOMEN</a>
+                <a class="nav-link left-nav mx-3" href="#">PLUS</a>
+                <a class="nav-link left-nav mx-3" href="#">MEN</a>
+                <a class="nav-link left-nav mx-3" href="#">ACCESSORIES</a>
+            </div>
+            <!-- Logo -->
+            <div>
+                <span class="logo">THREADED</span>
+            </div>
+            <!-- Right Nav -->
+            <div class="d-flex">
+              <img class="mx-3" src="./assets/icons/bx_bx-user.svg" alt="User" />
+              <img id="checkout_button" class="view_cart pointer mx-3" src="./assets/icons/bx_bx-shopping-cart.svg" alt="Cart"/>
+              <span id="shopcart_badge" class="badge text-bg-danger rounded-pill my-3 view_cart pointer d-none"></span>
+              <img class="mx-3" src="./assets/icons/bx_bx-heart.svg" alt="Favorites" />
+              <img class="mx-3" src="./assets/icons/bx_bx-support.svg" alt="Support" />
+              <img class="mx-3" src="./assets/icons/bx_bx-search.svg" alt="Search" />
+              <div class="dropdown mt-2">
+                  <a class="btn btn-light rounded-5 currency" href="#" role="button">
+                      <img src="./assets/images/us_flag.png" alt="Currency" />
+                      <span>USD $</span>
+                      <img src="./assets/icons/ant-design_down-outlined.svg" alt="Dropdown Icon" class="dropdown-icon" />
+                  </a>
+              </div>
+
+              <!-- Cart Panel -->
+              <div id="cart_panel" class="cart-panel position-absolute d-none rounded-2">
+                <div class="modal-header">
+                  <span class="modal-title cart-panel-title fs-5" id="cart_label"> MY CART</span>
+                  <button id="closecart_panel" class="btn-close" aria-label="Close"></button>
+                </div>
+                <div id="shop_cart_body" class="modal-body">
+                  <div id="shopcart_items" class="container"></div>
+                </div>
+                <div class="d-flex flex-column p-3 border-top">
+                  <div class="d-flex p-2">
+                    <span>Total</span>
+                    <span id="grandTotal" class="ms-auto fw-bold">0.00</span>
+                  </div>
+                  <a href="checkout.html" class="btn btn-dark w-100 my-4 centered-text-button checkout">BEGIN CHECKOUT</a>
+                </div>
+              </div>
+        </div>
+    </nav>
+    
+    <!-- Benefits -->
+    <div class="benefits d-flex justify-content-evenly align-items-center">
+        <div>
+            <img src="./assets/icons/bx_bx-crown.svg" alt="Crown"/>
+            <span class="margin-left">Exclusive Deals for VIP 2 and up!</span>
+        </div>
+        <div>
+            <img src="./assets/icons/bx_bx-star.svg" alt="Star"/>
+            <span class="margin-left">Weekly New Arrivals</span>
+        </div>
+        <div>
+            <img src="./assets/icons/mdi_truck-delivery-outline.svg" alt="Delivery Truck"/>
+            <span class="margin-left">Free Shipping On Orders Over $100</span>
+        </div>
+        <div>
+            <img src="./assets/icons/bx_bx-map-pin.svg" alt="Map Pin"/>
+            <span class="margin-left">Track Your Order</span>
+        </div>
+        <div>
+            <img src="./assets/icons/bx_bx-purchase-tag.svg" alt="Tag"/>
+            <span class="margin-left">10% Off On Your First Order!</span>
+        </div>
+    </div>
+    
+    <!-- Hero -->
+    <img src="./assets/images/Hero.png" alt="Hero Image" class="hero"/>
+    
+    
+    <!-- Site-wide -->
+    <div class="deal d-flex justify-content-evenly align-items-center">
+        <div class="d-flex flex-column">
+            <div class="d-flex justify-content-evenly align-items-center">
+                <span class="value">$5</span>
+                <span class="off">OFF</span>
+            </div>
+            <span class="text">ON ORDERS ABOVE $50</span>
+        </div>
+        <div class="d-flex flex-column">
+            <div class="d-flex justify-content-evenly align-items-center">
+                <span class="value">$15</span>
+                <span class="off">OFF</span>
+            </div>
+            <span class="text">ON ORDERS ABOVE $75</span>
+        </div>
+        <div class="d-flex flex-column">
+            <div class="d-flex justify-content-evenly align-items-center">
+                <span class="value">$20</span>
+                <span class="off">OFF</span>
+            </div>
+            <span class="text">ON ORDERS ABOVE $150</span>
+        </div>
+        <div class="d-flex flex-column">
+            <div class="d-flex justify-content-evenly align-items-center">
+                <span class="value">$30</span>
+                <span class="off">OFF</span>
+            </div>
+            <span class="text">ON ORDERS ABOVE $200</span>
+        </div>
+        <span class="btn btn-dark deal-button rounded-0 centered-text-button">CHECK OUT ALL SITE-WIDE DEALS</span>
+    </div> 
+
+    <!-- Black Friday Exclusive -->
+    <div class="black-friday-bar d-flex justify-content-evenly align-items-center mb-5">
+      <span class="black-friday-title">BLACK FRIDAY EXCLUSIVE</span>
+      <span class="black-friday-text">
+          FREE SHIPPING ON ALL ORDERS FOR <br/> VIP 2 AND UP!
+      </span>
+      <span class="btn btn-light black-friday-button rounded-0 centered-text-button">SHOP NOW</span>
+    </div>
+
+    <!-- Trending -->
+    <div class="trending d-flex flex-column justify-content-top align-items-center">
+      <span class="heading">Now Trending</span>
+      <span class="sub-title mt-4">See what everyone's wearing right now</span>
+      <div class="container">
+          <div class="row justify-content-evenly align-items-center mt-5">
+              <div class="col-3 d-flex flex-column justify-content-evenly align-items-center">
+                  <img src="./assets/images/trending1.png" alt="WINTER FASHION" class="items"/>
+                  <span class="category">WINTER FASHION</span>
+              </div>
+              <div class="col-3 d-flex flex-column justify-content-evenly align-items-center">
+                  <img src="./assets/images/trending2.png" alt="BOOTS" class="items"/>
+                  <span class="category">BOOTS</span>
+              </div>
+              <div class="col-3 d-flex flex-column justify-content-evenly align-items-center">
+                  <img src="./assets/images/trending3.png" alt="NIGHT OUT" class="items"/>
+                  <span class="category">NIGHT OUT</span>
+              </div>
+              <div class="col-3 d-flex flex-column justify-content-evenly align-items-center">
+                  <img src="./assets/images/trending4.png" alt="HOLIDAYS" class="items"/>
+                  <span class="category">HOLIDAYS</span>
+              </div>
+          </div>
+          <div class="row justify-content-evenly align-items-center mt-5">
+              <div class="col-3 d-flex flex-column justify-content-evenly align-items-center">
+                  <img src="./assets/images/trending5.png" alt="OUTERWEAR" class="items"/>
+                  <span class="category">OUTERWEAR</span>
+              </div>
+              <div class="col-3 d-flex flex-column justify-content-evenly align-items-center">
+                  <img src="./assets/images/trending6.png" alt="WHITE DRESSES" class="items"/>
+                  <span class="category">WHITE DRESSES</span>
+              </div>
+              <div class="col-3 d-flex flex-column justify-content-evenly align-items-center">
+                  <img src="./assets/images/trending7.png" alt="SWEATERS" class="items"/>
+                  <span class="category">SWEATERS</span>
+              </div>
+              <div class="col-3 d-flex flex-column justify-content-evenly align-items-center">
+                  <img src="./assets/images/trending8.png" alt="PARTY" class="items"/>
+                  <span class="category">PARTY</span>
+              </div>
+          </div>
+          <div class="d-flex justify-content-center align-items-center mt-5">
+              <span class="btn btn-light rounded-5 border hashtags mx-5 no-cursor">#Thanksgiving</span>
+              <span class="btn btn-light rounded-5 border hashtags mx-5 no-cursor">#NewYears</span>
+              <span class="btn btn-light rounded-5 border hashtags mx-5 no-cursor">#Knitted</span>
+              <span class="btn btn-light rounded-5 border hashtags mx-5 no-cursor">#Pajamas</span>
+              <span class="btn btn-light rounded-5 border hashtags mx-5 no-cursor">#WFH</span>
+              <span class="btn btn-light rounded-5 border hashtags mx-5 no-cursor">#FallFashion</span>
+          </div>
+      </div>
+    </div>
+    
+    <!-- New In -->
+    <div class="new-in d-flex justify-content-end align-items-center mb-5 pr-5">
+        <div class="d-flex flex-column m-5">
+            <span class="new-in-title mb-4">NEW <br/> ARRIVALS</span>
+            <span class="new-in-sub-title mb-5">Get ready for the holidays with us!</span>
+            <span class="btn btn-light rounded-0 new-in-button centered-text-button">SHOP NOW</span>
+        </div>
+    </div>
+    
+    <!-- Recently Bought -->
+    <div class="d-flex flex-column justify-content-start align-items-center">
+        <span class="heading">Recently Bought</span>
+        <div class="container p-0">
+            <div class="row justify-content-evenly align-items-center mt-4">
+                <div class="col d-flex flex-column align-items-center w-100">
+                    <img src="./assets/images/recent1.png" alt="Festive Looks Rust Red Ribbed Velvet Long Sleeve Bodysuit" class="items"/>
+                    <div class="d-flex flex-column ps-2">
+                        <span class="sub-title mt-2">Festive Looks Rust Red Ribbed Velvet Long Sleeve Bodysuit</span>
+                        <span class="hashtags mt-2">$38</span>
+                        <span data-item_id="1" class="btn btn-sm btn-dark mt-2 inventory_item">Buy</span>
+                    </div>
+                </div>
+                <div class="col d-flex flex-column align-items-center">
+                    <img src="./assets/images/recent2.png" lt="Chevron Flap Crossbody Bag" class="items"/>
+                    <div class="d-flex flex-column ps-2 w-100">
+                        <span class="sub-title mt-2">Chevron Flap Crossbody Bag</span>
+                        <div class="spacer"></div>
+                        <div>
+                            <span class="hashtags discounted-price me-3">$5.77</span>
+                            <span class="hashtags orig-price">$7.34</span>
+                        </div>
+                        <span data-item_id="2" class="btn btn-sm btn-dark mt-2 inventory_item">Buy</span>
+                    </div>
+                </div>
+                <div class="col d-flex flex-column align-items-center">
+                    <img src="./assets/images/recent3.png" alt="Manilla Tan Multi Plaid Oversized Fringe Scarf" class="items"/>
+                    <div class="d-flex flex-column ps-2">
+                        <span class="sub-title mt-2">Manilla Tan Multi Plaid Oversized Fringe Scarf</span>
+                        <div>
+                            <span class="hashtags discounted-price me-3">$29</span>
+                            <span class="hashtags orig-price">$39</span>
+                        </div>
+                        <span data-item_id="3" class="btn btn-sm btn-dark mt-2 inventory_item">Buy</span>
+                    </div>
+                </div>
+                <div class="col d-flex flex-column align-items-center">
+                    <img src="./assets/images/recent4.png" alt="Diamante Puff Sleeve Dress - Black" class="items"/>
+                    <div class="d-flex flex-column ps-2">
+                        <span class="sub-title mt-2">Diamante Puff Sleeve Dress - Black</span>
+                        <span class="hashtags mt-2">$45.99</span>
+                        <span data-item_id="4" class="btn btn-sm btn-dark mt-2 inventory_item">Buy</span>
+                    </div>
+                </div>
+                <div class="col d-flex flex-column align-items-center">
+                    <img src="./assets/images/recent5.png" alt="Banneth Open Front Formal Dress In Black" class="items"/>
+                    <div class="d-flex flex-column ps-2">
+                        <span class="sub-title mt-2">Banneth Open Front Formal Dress In Black</span>
+                        <div>
+                            <span class="hashtags discounted-price me-3">$69</span>
+                            <span class="hashtags orig-price">$99.95</span>
+                        </div>
+                        <span data-item_id="5" class="btn btn-sm btn-dark mt-2 inventory_item">Buy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Inspo -->
+    <div class="insta-bar d-flex flex-column justify-content-start align-items-center mt-5 pt-5">
+      <span class="heading">Your Next Inspo</span>
+      <span class="sub-title mt-4 mb-3">Checkout who's wearing what by using #THREADEDInspo on Instagram</span>
+      <div class="container p-0">
+          <div class="row justify-content-evenly align-items-center mt-5">
+              <div class="col d-flex flex-column justify-content-evenly align-items-center">
+                  <img src="./assets/images/inspo1.png" alt="inspo1" class="inspo" />
+              </div>
+              <div class="col d-flex flex-column justify-content-evenly align-items-center">
+                  <img src="./assets/images/inspo2.png" alt="inspo2" class="inspo" />
+              </div>
+              <div class="col d-flex flex-column justify-content-evenly align-items-center">
+                  <img src="./assets/images/inspo3.png" alt="inspo3" class="inspo" />
+              </div>
+              <div class="col d-flex flex-column justify-content-evenly align-items-center">
+                  <img src="./assets/images/inspo4.png" alt="inspo4" class="inspo" />
+              </div>
+              <div class="col d-flex flex-column justify-content-evenly align-items-center">
+                  <img src="./assets/images/inspo5.png" alt="inspo5" class="inspo" />
+              </div>
+          </div>
+          <div class="row justify-content-evenly align-items-center mt-5 mb-5">
+              <span class="btn btn-dark rounded-0 insta-button buttons centered-text-button">VIEW ALL POSTS</span>
+          </div>
+      </div>
+    </div>
+
+    <!-- Signup -->
+    <div class="black-friday-bar d-flex justify-content-evenly align-items-center" style="background-image: none">
+      <span class="heading">SIGN UP FOR EXCLUSIVE DEALS AND UPDATES</span>
+      <form type="submit">
+          <div class="d-flex">
+              <input class="form-control rounded-0 email-input no-right-border" type="email" placeholder="Your Email Address" style="width: 354px"/>
+              <div class="button-container">
+                  <button class="btn btn-light rounded-0 no-left-border">
+                      <img src="./assets/images/ant-design_right-outlined.png" alt="" />
+                  </button>
+              </div>
+          </div>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="d-flex flex-column p-5">
+      <div class="row align-items-start mb-5">
+          <div class="col-auto me-5">
+              <span class="hashtags">COMPANY INFO</span>
+              <ul class="list-group mt-2">
+                  <li class="nav-item my-2">
+                      <a class="nav-link" href="#">About THREADED</a>
+                  </li>
+                  <li class="nav-item my-2">Affiliate</li>
+                  <li class="nav-item my-2">Blog</li>
+                  <li class="nav-item my-2">Careers</li>
+              </ul>
+          </div>
+          <div class="col-auto me-5">
+              <span class="hashtags">HELP & SUPPORT</span>
+              <ul class="list-group mt-2">
+                  <li class="nav-item my-2">FAQ</li>
+                  <li class="nav-item my-2">Shipping</li>
+                  <li class="nav-item my-2">Returns</li>
+                  <li class="nav-item my-2">How To Order</li>
+                  <li class="nav-item my-2">How To Track</li>
+              </ul>
+          </div>
+          <div class="col-2">
+              <span class="hashtags">CUSTOMER CARE</span>
+              <ul class="list-group mt-2">
+                  <li class="nav-item my-2">Contact Us</li>
+                  <li class="nav-item my-2">Payment Methods</li>
+              </ul>
+          </div>
+          <div class="col-3">
+              <span class="hashtags">FOLLOW US</span>
+              <div class="mt-2 mb-3">
+                  <img src="./assets/icons/bx_bxl-facebook.svg" alt="facebook" />
+                  <img src="./assets/icons/bx_bxl-instagram.svg" alt="instagram" class="mx-2" />
+                  <img src="./assets/icons/bx_bxl-twitter.svg" alt="twitter" class="mx-2" />
+                  <img src="./assets/icons/bx_bxl-youtube.svg" alt="youtube" class="mx-2" />
+                  <img src="./assets/icons/bx_bxl-pinterest-alt.svg" alt="pinterest" class="mx-2" />
+                  <img src="./assets/icons/bx_bxl-tiktok.svg" alt="tiktok" class="mx-2" />
+              </div>
+              <span class="hashtags">WE ACCEPT</span>
+              <div class="mt-2">
+                  <img src="./assets/images/payment1.png" alt="visa" class="payments" />
+                  <img src="./assets/images/payment2.png" alt="mastercard" class="mx-2 payments" />
+                  <img src="./assets/images/payment3.png" alt="paypal" class="mx-2 payments" />
+                  <img src="./assets/images/payment4.png" alt="amex" class="mx-2 payments" />
+                  <img src="./assets/images/payment5.png" alt="discover" class="mx-2 payments" />
+              </div>
+          </div>
+      </div>
+      <div class="d-flex justify-content-between align-items-center">
+          <div><span>©2021 THREADED All Rights Reserved.</span></div>
+          <div><span class="logo me-auto">THREADED</span></div>
+      </div>
+    </div>
+  </body>
+</html>

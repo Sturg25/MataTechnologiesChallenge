@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # MataTechnologiesChallenge
 =======
 # E-Commerce Cart System
@@ -21,4 +20,3 @@ This project is a simple e-commerce shopping cart system using HTML, CSS, JavaSc
 - **JavaScript (jQuery)**: Handles dynamic behavior for the cart, like adding/removing items and checkout.
 - **SweetAlert2**: Provides a modern pop-up experience for user feedback.
 - **Local Storage**: Used to save cart items locally for the user.
->>>>>>> aeeff4f81308e473fdd1a9739f3e95a43c7435cc
